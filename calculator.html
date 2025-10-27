@@ -1,0 +1,16 @@
+<html>
+<body>
+<h2>simple calculator</h2>
+<input type="number" id="num1" placeholder="enter first number">
+<input type="number" id="num2" placeholder="eneter second number">
+<button onclick="add()">ADD</button>
+<p id="result"></p>
+<script>
+function  add(){
+let a=parseInt(document.getElementById("num1").value);
+let b=parseInt(document.getElementById("num2").value);
+document.getElementById("result").innerText="sum="+(a+b);
+}
+</script>
+</body>
+</html>
