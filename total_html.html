@@ -1,0 +1,395 @@
+Frames in HTML (with styling inside each frame file)
+
+main.html
+
+<!DOCTYPE html>
+<html>
+<frameset rows="33%,34%,33%">
+    <frame src="top.html">
+    <frame src="middle.html">
+    <frame src="bottom.html">
+</frameset>
+</html>
+
+top.html
+
+<body style="background-color: lightblue; font-size: 20px; text-align:center;">
+    <h2>Top Frame</h2>
+</body>
+
+middle.html
+
+<body style="background-color: lightgreen; font-size: 20px; text-align:center;">
+    <h2>Middle Frame</h2>
+</body>
+
+bottom.html
+
+<body style="background-color: lightpink; font-size: 20px; text-align:center;">
+    <h2>Bottom Frame</h2>
+</body>
+
+
+---
+
+✅ 2. List Types
+
+<!DOCTYPE html>
+<html>
+<body style="font-size:20px; margin:20px; background: #f4f4f4;">
+
+<h2 style="color:blue; text-align:center;">Types of Lists</h2>
+
+<h3>1. Ordered List</h3>
+<ol style="color:green;">
+  <li>Apple</li>
+  <li>Banana</li>
+</ol>
+
+<h3>2. Unordered List</h3>
+<ul style="color:red;">
+  <li>Red</li>
+  <li>Blue</li>
+</ul>
+
+<h3>3. Definition List</h3>
+<dl style="color:purple;">
+  <dt><b>HTML</b></dt>
+  <dd>Hyper Text Markup Language</dd>
+</dl>
+
+</body>
+</html>
+
+
+---
+
+✅ 3. HTML Table
+
+<!DOCTYPE html>
+<html>
+<body style="background:#eef; margin:20px;">
+
+<h2 style="text-align:center;">Simple Table</h2>
+
+<table border="1" style="width:50%; margin:auto; font-size:20px; background:white;">
+  <tr><th>Name</th><th>Age</th></tr>
+  <tr><td>Ram</td><td>20</td></tr>
+  <tr><td>Sita</td><td>19</td></tr>
+</table>
+
+</body>
+</html>
+
+
+---
+
+✅ 4. JavaScript Message
+
+<!DOCTYPE html>
+<html>
+<body style="text-align:center; font-size:22px; background:lightyellow;">
+
+<h2 style="color:blue;">JavaScript Example</h2>
+
+<script>
+    document.write("<p style='color:red;'>Welcome to JavaScript!</p>");
+</script>
+
+</body>
+</html>
+
+
+---
+
+✅ 5. Common HTML Tags
+
+<!DOCTYPE html>
+<html>
+<body style="font-size:20px; background:#fafafa; margin:20px;">
+
+<h1 style="color:blue; text-align:center;">Heading 1</h1>
+
+<p style="color:green;">This is a paragraph.</p>
+<b style="color:red;">Bold Text</b><br>
+<i style="color:purple;">Italic Text</i><br>
+<u style="color:brown;">Underlined Text</u>
+
+</body>
+</html>
+
+
+---
+
+✅ 6. Random Number
+
+<!DOCTYPE html>
+<html>
+<body style="text-align:center; background:#ddf; padding:20px;">
+
+<button onclick="gen()" style="font-size:20px;">Generate Number</button>
+<p id="num" style="font-size:25px; color:green;"></p>
+
+<script>
+function gen() {
+  document.getElementById("num").innerHTML = Math.floor(Math.random()*100);
+}
+</script>
+
+</body>
+</html>
+
+
+---
+
+✅ 7. Random Quote Generator
+
+<!DOCTYPE html>
+<html>
+<body style="font-size:20px; text-align:center; background:#f9f9f9; padding:20px;">
+
+<h2 style="color:blue;">Random Quote</h2>
+<p id="quote" style="margin:20px;"></p>
+
+<button onclick="show()" style="font-size:18px;">New Quote</button>
+
+<script>
+let quotes=["Keep going!","Believe in yourself.","Never give up."];
+function show(){
+  let q = quotes[Math.floor(Math.random()*quotes.length)];
+  document.getElementById("quote").innerHTML = q;
+}
+</script>
+
+</body>
+</html>
+
+
+---
+
+✅ 8. CSS Stylesheet Example
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { 
+  background-color: lightblue; 
+  font-size:20px; 
+  margin:20px;
+}
+h1 { 
+  color: red; 
+  text-align:center;
+}
+p { 
+  color:green; 
+}
+</style>
+</head>
+<body>
+
+<h1>Styled Page</h1>
+<p>This is styled using CSS.</p>
+
+</body>
+</html>
+
+
+---
+
+✅ 9. Age Calculator
+
+<!DOCTYPE html>
+<html>
+<body style="background:#ffe; text-align:center; padding:30px; font-size:20px;">
+
+Enter Birth Year: 
+<input id="year" style="font-size:18px;">
+<button onclick="calc()">Check Age</button>
+
+<p id="age" style="color:blue;"></p>
+
+<script>
+function calc(){
+  let y = document.getElementById("year").value;
+  let age = 2025 - y;
+  document.getElementById("age").innerHTML = "Your age is: " + age;
+}
+</script>
+
+</body>
+</html>
+
+
+---
+
+✅ 10. Digital Clock
+
+<!DOCTYPE html>
+<html>
+<body style="text-align:center; background:#cdf; padding:30px;">
+
+<h2 id="clock" style="font-size:40px; color:purple;"></h2>
+
+<script>
+function time(){
+  document.getElementById("clock").innerHTML = new Date().toLocaleTimeString();
+}
+setInterval(time,1000);
+</script>
+
+</body>
+</html>
+
+
+---
+
+✅ 11. Registration Form
+
+<!DOCTYPE html>
+<html>
+<body style="background:#f0f0f0; margin:30px; font-size:20px;">
+
+<h2 style="text-align:center;">Registration Form</h2>
+
+<form style="background:white; padding:20px; width:50%; margin:auto;">
+
+Name: <input type="text"><br><br>
+Email: <input type="email"><br><br>
+Password: <input type="password"><br><br>
+
+Gender:
+<input type="radio" name="g">Male
+<input type="radio" name="g">Female<br><br>
+
+<input type="submit">
+</form>
+
+</body>
+</html>
+
+
+---
+
+✅ 12. Simple Calculator
+
+<!DOCTYPE html>
+<html>
+<body style="text-align:center; background:#eef; padding:20px; font-size:20px;">
+
+<input id="a" style="font-size:18px;"> 
+<input id="b" style="font-size:18px;">
+<button onclick="add()" style="font-size:18px;">Add</button>
+
+<p id="res" style="color:green;"></p>
+
+<script>
+function add(){
+  let x = Number(document.getElementById("a").value);
+  let y = Number(document.getElementById("b").value);
+  document.getElementById("res").innerHTML = x + y;
+}
+</script>
+
+</body>
+</html>
+
+
+---
+
+✅ 13. Simple To-Do List
+
+<!DOCTYPE html>
+<html>
+<body style="background:#fff; padding:20px; font-size:20px;">
+
+<input id="task" style="font-size:18px;">
+<button onclick="add()" style="font-size:18px;">Add</button>
+
+<ul id="list" style="margin-top:20px;"></ul>
+
+<script>
+function add(){
+  let t = document.getElementById("task").value;
+  let li = document.createElement("li");
+  li.innerHTML = t;
+  li.style.margin="5px";
+  document.getElementById("list").appendChild(li);
+}
+</script>
+
+</body>
+</html>
+
+
+---
+
+✅ 14. Background Color Changer
+
+<!DOCTYPE html>
+<html>
+<body style="text-align:center; padding:20px; font-size:20px;">
+
+<button onclick="change()" style="font-size:18px;">Change Color</button>
+
+<script>
+function change(){
+  let colors=["red","blue","yellow","green","pink","purple"];
+  document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
+}
+</script>
+
+</body>
+</html>
+
+
+---
+
+✅ 15. Simple Interest Calculator
+
+<!DOCTYPE html>
+<html>
+<body style="font-size:20px; background:#fefbd8; padding:20px;">
+
+P: <input id="p"><br><br>
+T: <input id="t"><br><br>
+R: <input id="r"><br><br>
+
+<button onclick="calc()">Calculate</button>
+
+<p id="si" style="color:blue; font-size:22px;"></p>
+
+<script>
+function calc(){
+  let p = Number(document.getElementById("p").value);
+  let t = Number(document.getElementById("t").value);
+  let r = Number(document.getElementById("r").value);
+  document.getElementById("si").innerHTML = "SI = " + (p*t*r)/100;
+}
+</script>
+
+</body>
+</html>
+
+
+---
+
+✅ 16. Dice Roll Simulator
+
+<!DOCTYPE html>
+<html>
+<body style="text-align:center; background:#ddf; padding:30px; font-size:25px;">
+
+<h2 id="dice" style="margin:20px;">Roll the Dice</h2>
+<button onclick="roll()" style="font-size:20px;">Roll</button>
+
+<script>
+function roll(){
+  let num = Math.floor(Math.random()*6)+1;
+  document.getElementById("dice").innerHTML = "You got: " + num;
+}
+</script>
+
+</body>
+</html>
