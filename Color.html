@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <button onclick="change()">hit me</button>
+    <script>
+       function change(){
+           let colors=["red","black","yellow"]
+           document.body.style.background=colors[Math.floor(Math.random()*colors.length)]
+       }
+    </script>
+</body>
+</html>
