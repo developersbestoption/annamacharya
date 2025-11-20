@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body style="background:#fff; padding:20px; font-size:20px;">
+
+<input id="task" style="font-size:18px;">
+<button onclick="add()" style="font-size:18px;">Add</button>
+
+<ul id="list" style="margin-top:20px;"></ul>
+
+<script>
+function add(){
+  let t = document.getElementById("task").value;
+  let li = document.createElement("li");
+  li.innerHTML = t;
+  li.style.margin="5px";
+  document.getElementById("list").appendChild(li);
+}
+</script>
+
+</body>
+</html>
